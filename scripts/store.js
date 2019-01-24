@@ -46,12 +46,17 @@ const store = (function() {
   }
 
   function findAndDelete (id) {
-    return this.items.filter(item => item.id !== id);
+    store.items = this.items.filter(item => item.id !== id);
   }
 
   return {
     items,
     hideCheckedItems,
     searchTerm,
+    findById,
+    addItem,
+    findAndToggleChecked,
+    findAndUpdateName,
+    findAndDelete
   };
 }());
