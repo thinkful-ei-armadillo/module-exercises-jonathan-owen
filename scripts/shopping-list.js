@@ -62,11 +62,11 @@ const shoppingList = (function(){
     try {
       Item.validateName(itemName);
       store.items.push(Item.create());
+      shoppingList.render();
     }
     catch (error) {
       console.log(`Cannot add item: + ${error.message}`);
-    }
-    shoppingList.render();
+    }    
     // store.items.push({ id: cuid(), name: itemName, checked: false });
   }
   
