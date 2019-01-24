@@ -34,6 +34,14 @@ const store = (function() {
     item.checked = !item.checked;
   }
 
+  function toggleCheckedFilter () {
+    this.hideCheckedItems = !this.hideCheckedItems;
+  }
+
+  function setSearchTerm (term) {
+    this.searchTerm = term;
+  }
+
   function findAndUpdateName (id, newName) {
     try {
       Item.validateName(newName);
@@ -57,6 +65,8 @@ const store = (function() {
     addItem,
     findAndToggleChecked,
     findAndUpdateName,
-    findAndDelete
+    findAndDelete,
+    toggleCheckedFilter,
+    setSearchTerm,
   };
 }());
