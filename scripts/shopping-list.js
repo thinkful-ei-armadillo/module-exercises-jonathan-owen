@@ -1,6 +1,9 @@
-/* global store, cuid */
+'use strict';
 
-// eslint-disable-next-line no-unused-vars
+/* eslint-disable no-console */
+/* eslint-disable no-unused-vars */
+/* global store, cuid, $ */
+
 const shoppingList = (function(){
 
   function generateItemElement(item) {

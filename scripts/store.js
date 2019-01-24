@@ -1,3 +1,9 @@
+'use strict';
+
+/* eslint-disable no-unused-vars */
+/* global store, cuid */
+
+
 const store = (function() {
   const items = [
     { id: cuid(), name: 'apples', checked: false },
@@ -11,4 +17,4 @@ const store = (function() {
     items,
     hideCheckedItems,
     searchTerm
-  }())
+  }();});
