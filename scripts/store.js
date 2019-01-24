@@ -45,14 +45,13 @@ const store = (function() {
     }
   }
 
-
-
-
-
+  function findAndDelete (id) {
+    return this.items.filter(item => item.id !== id);
+  }
 
   return {
     items,
     hideCheckedItems,
-    searchTerm
+    searchTerm,
   };
 }());
